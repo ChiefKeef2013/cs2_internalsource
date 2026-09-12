@@ -1693,7 +1693,7 @@ namespace hooks {
 
 		const auto eat_input = game_input_blocked();
 		const auto local = systems::g_local.get();
-		if (!eat_input && local.is_alive && local.team >= 2 && systems::g_view.has_camera() && )
+		if (!eat_input && local.is_alive && local.team >= 2 && systems::g_view.has_camera() )
 		{
 			features::movement::g_bhop.pre_create_move(thisptr);
 		}
@@ -1873,7 +1873,7 @@ namespace hooks {
 
 	void __fastcall cheat::aggregate_draw_array(std::uintptr_t thisptr, std::uintptr_t a2, std::uintptr_t mesh_array, int mesh_count, int a5, std::uintptr_t a6, std::uintptr_t a7, std::uintptr_t a8)
 	{
-		if (!scene_mod_busy() && )
+		if (!scene_mod_busy() )
 		{
 			features::world::g_scene.on_draw_scene_object(mesh_array, mesh_count);
 		}
@@ -1903,7 +1903,7 @@ namespace hooks {
 	{
 		m_draw_scene_object_array.call<void>(thisptr, a2, object_array);
 
-		if (!scene_mod_busy() && )
+		if (!scene_mod_busy() )
 		{
 			features::world::g_scene.on_draw_scene_object_array(object_array);
 		}
@@ -1911,7 +1911,7 @@ namespace hooks {
 
 	std::uintptr_t __fastcall cheat::draw_scene_object(std::uintptr_t a1, std::uintptr_t a2, std::uintptr_t batch, int batch_count, int a5, std::uintptr_t a6, std::uintptr_t a7, std::uintptr_t a8)
 	{
-		if (!scene_mod_busy() && )
+		if (!scene_mod_busy() )
 		{
 			features::world::g_scene.on_draw_scene_object(batch, batch_count);
 		}
@@ -1941,7 +1941,7 @@ namespace hooks {
 
 	bool __fastcall cheat::is_glowing(std::uintptr_t glow_property)
 	{
-		if (glow_property && !scene_mod_busy() && )
+		if (glow_property && !scene_mod_busy() )
 		{
 			const auto owner_entity = memory::read<std::uintptr_t>(glow_property + 0x18);
 			if (memory::is_game_ptr(owner_entity))
@@ -1967,7 +1967,7 @@ namespace hooks {
 
 	void __fastcall cheat::get_glow_color(std::uintptr_t glow_property, float* color)
 	{
-		if (glow_property && !scene_mod_busy() && )
+		if (glow_property && !scene_mod_busy() )
 		{
 			const auto owner_entity = memory::read<std::uintptr_t>(glow_property + 0x18);
 			if (memory::is_game_ptr(owner_entity))
@@ -2355,7 +2355,7 @@ namespace hooks {
 	{
 		m_sort_primitives.call<void>(thisptr, a2, a3, a4);
 
-		if (!world_busy() && )
+		if (!world_busy() )
 		{
 			features::esp::player::g_chams.on_sort_primitives(a3, a4);
 		}

@@ -70,7 +70,7 @@
       <EnableUAC>false</EnableUAC>
       <EntryPointSymbol>entry</EntryPointSymbol>
       <AdditionalLibraryDirectories>src/core/menu/Framework/Framework/Src/thirdparty/freetype/win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freetype.lib;Synchronization.lib;WindowsApp.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freetype.lib;Synchronization.lib;WindowsApp.lib;d3dcompiler.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
