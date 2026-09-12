@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{cb0834fb-b98e-4d38-98da-6122c24744f8}</ProjectGuid>
+    <RootNamespace>Framework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>framework</TargetName>
+    <OutDir>../build</OutDir>
+    <IntDir>.\Src\thirdparty/obj</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)Src\thirdparty\imgui;$(ProjectDir)Src\thirdparty\dxsdk\Lib\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\framework\data\fonts.h" />
+    <ClInclude Include="Src\framework\data\font_data.h" />
+    <ClInclude Include="Src\framework\data\IconsFontAwesome6.h" />
+    <ClInclude Include="Src\framework\data\IconsFontAwesome6Brands.h" />
+    <ClInclude Include="Src\framework\data\IconsFontAwesome6Brands_Bytes.h" />
+    <ClInclude Include="Src\framework\data\IconsFontAwesome6_Bytes.h" />
+    <ClInclude Include="Src\framework\data\IconsV2.h" />
+    <ClInclude Include="Src\framework\data\IconsV2_Defines.h" />
+    <ClInclude Include="Src\framework\data\images.h" />
+    <ClInclude Include="Src\framework\data\Logos\logo.h" />
+    <ClInclude Include="Src\framework\data\pattern\pattern.h" />
+    <ClInclude Include="Src\framework\data\pfp\pfp.h" />
+    <ClInclude Include="Src\framework\data\shaders\aurora_glow.h" />
+    <ClInclude Include="Src\framework\data\shaders\box_glow_shader.h" />
+    <ClInclude Include="Src\framework\data\shaders\glow_shader.h" />
+    <ClInclude Include="Src\framework\data\shaders\shader_manager.h" />
+    <ClInclude Include="Src\framework\headers\config.h" />
+    <ClInclude Include="Src\framework\headers\draw.h" />
+    <ClInclude Include="Src\framework\headers\flags.h" />
+    <ClInclude Include="Src\framework\headers\fonts.h" />
+    <ClInclude Include="Src\framework\headers\functions.h" />
+    <ClInclude Include="Src\framework\headers\includes.h" />
+    <ClInclude Include="Src\framework\headers\widgets.h" />
+    <ClInclude Include="Src\framework\settings\colors.h" />
+    <ClInclude Include="Src\framework\settings\elements.h" />
+    <ClInclude Include="Src\framework\settings\variables.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\audiodefs.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\comdecl.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D2D1.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D2D1Helper.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D2DBaseTypes.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D2Derr.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D10.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D10effect.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3d10misc.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3d10sdklayers.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D10shader.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D10_1.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D10_1shader.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D11.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D11SDKLayers.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3D11Shader.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3d9.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3d9caps.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3d9types.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3Dcommon.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3Dcompiler.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DCSX.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX10.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx10async.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX10core.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX10math.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX10mesh.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX10tex.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX11.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX11async.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX11core.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\D3DX11tex.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9anim.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9core.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9effect.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9math.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9mesh.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9shader.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9shape.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9tex.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\d3dx9xof.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\Dcommon.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\detours.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dinput.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dinputd.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dsconf.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dsetup.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dsound.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\DWrite.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dxdiag.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\DxErr.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dxfile.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\DXGI.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\DXGIFormat.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\DXGIType.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\dxsdkver.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\gameux.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\PIXPlugin.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\rmxfguid.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\rmxftmpl.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\rpcsal.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\X3DAudio.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\xact3.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\xact3d3.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\xact3wb.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\XAPO.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\XAPOBase.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\XAPOFX.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\XAudio2.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\XAudio2fx.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\XDSP.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\XInput.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\xma2defs.h" />
+    <ClInclude Include="Src\thirdparty\dxsdk\Include\xnamath.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\ftheader.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\integer-types.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\mac-support.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\config\public-macros.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\freetype.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftadvanc.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftbbox.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftbdf.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftbitmap.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftbzip2.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftcache.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftchapters.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftcid.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftcolor.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftdriver.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\fterrdef.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\fterrors.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftgasp.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftglyph.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftgxval.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftgzip.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftimage.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftincrem.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftlist.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftlogging.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftlzw.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftmac.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftmm.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftmodapi.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftmoderr.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftotval.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftoutln.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftparams.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftpfr.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftrender.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftsizes.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftsnames.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftstroke.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftsynth.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftsystem.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\fttrigon.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\fttypes.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\otsvg.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\t1tables.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\ttnameid.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\tttables.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\freetype\tttags.h" />
+    <ClInclude Include="Src\thirdparty\freetype\include\ft2build.h" />
+    <ClInclude Include="Src\thirdparty\imgui\backends\imgui_impl_dx10.h" />
+    <ClInclude Include="Src\thirdparty\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="Src\thirdparty\imgui\backends\imgui_impl_dx12.h" />
+    <ClInclude Include="Src\thirdparty\imgui\backends\imgui_impl_dx9.h" />
+    <ClInclude Include="Src\thirdparty\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="Src\thirdparty\imgui\imconfig.h" />
+    <ClInclude Include="Src\thirdparty\imgui\imgui.h" />
+    <ClInclude Include="Src\thirdparty\imgui\imgui_freetype.h" />
+    <ClInclude Include="Src\thirdparty\imgui\imgui_internal.h" />
+    <ClInclude Include="Src\thirdparty\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Src\thirdparty\imgui\imstb_textedit.h" />
+    <ClInclude Include="Src\thirdparty\imgui\imstb_truetype.h" />
+    <ClInclude Include="Src\thirdparty\stb\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\framework\data\images.cpp" />
+    <ClCompile Include="Src\framework\gui.cpp" />
+    <ClCompile Include="Src\framework\helpers\config.cpp" />
+    <ClCompile Include="Src\framework\helpers\draw.cpp" />
+    <ClCompile Include="Src\framework\helpers\fonts.cpp" />
+    <ClCompile Include="Src\framework\widgets\button.cpp" />
+    <ClCompile Include="Src\framework\widgets\checkbox.cpp" />
+    <ClCompile Include="Src\framework\widgets\coloredit.cpp" />
+    <ClCompile Include="Src\framework\widgets\Customparticles.cpp" />
+    <ClCompile Include="Src\framework\widgets\dropdown.cpp" />
+    <ClCompile Include="Src\framework\widgets\helpers.cpp" />
+    <ClCompile Include="Src\framework\widgets\keybinds.cpp" />
+    <ClCompile Include="Src\framework\widgets\layout.cpp" />
+    <ClCompile Include="Src\framework\widgets\musicplayer.cpp" />
+    <ClCompile Include="Src\framework\widgets\notify.cpp" />
+    <ClCompile Include="Src\framework\widgets\slider.cpp" />
+    <ClCompile Include="Src\framework\widgets\spectatorlist.cpp" />
+    <ClCompile Include="Src\framework\widgets\watermark.cpp" />
+    <ClCompile Include="Src\framework\widgets\welcomebar.cpp" />
+    <ClCompile Include="Src\framework\widgets\window.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\backends\imgui_impl_dx10.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\backends\imgui_impl_dx12.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\backends\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\examples\example_win32_directx11\main.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\imgui.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\imgui_freetype.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Src\thirdparty\imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Src\thirdparty\dxsdk\Include\D3DX10math.inl" />
+    <None Include="Src\thirdparty\dxsdk\Include\d3dx9math.inl" />
+    <None Include="Src\thirdparty\dxsdk\Include\D3DX_DXGIFormatConvert.inl" />
+    <None Include="Src\thirdparty\dxsdk\Include\xnamathconvert.inl" />
+    <None Include="Src\thirdparty\dxsdk\Include\xnamathmatrix.inl" />
+    <None Include="Src\thirdparty\dxsdk\Include\xnamathmisc.inl" />
+    <None Include="Src\thirdparty\dxsdk\Include\xnamathvector.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

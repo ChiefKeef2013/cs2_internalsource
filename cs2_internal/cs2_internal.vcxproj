@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d30ae6e8-620d-42e0-b3f4-804cafe20f44}</ProjectGuid>
+    <RootNamespace>cs2_internal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>true</EnableUnitySupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>../bin/</OutDir>
+    <IntDir>../bin/intermediates/</IntDir>
+    <IncludePath>ext/phnt;src/;src/core/menu/Framework/Framework/Src/thirdparty;src/core/menu/Framework/Framework/Src/thirdparty/imgui;src/core/menu/Framework/Framework/Src/thirdparty/imgui/backends;src/core/menu/Framework/Framework/Src/thirdparty/freetype/include;src/core/menu/Framework/Framework/Src/framework;src/core/menu/Framework/Framework/Src;ext/;$(IncludePath)</IncludePath>
+    <TargetName>cs2_internal</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <VcpkgEnableManifest>false</VcpkgEnableManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;DEV;CS2_INTERNAL_EXPORTS;_WINDOWS;_USRDLL;IMGUI_ENABLE_FREETYPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <IncludeInUnityFile>false</IncludeInUnityFile>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <Optimization>MaxSpeed</Optimization>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <EntryPointSymbol>entry</EntryPointSymbol>
+      <AdditionalLibraryDirectories>src/core/menu/Framework/Framework/Src/thirdparty/freetype/win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freetype.lib;Synchronization.lib;WindowsApp.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\hooks\impl\hook.cpp" />
+    <ClCompile Include="src\modules\visuals\skinchanger\skin_preview.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\gui.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\data\images.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\helpers\config.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\helpers\draw.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\helpers\fonts.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\button.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\esp_preview.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\checkbox.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\keybind.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\coloredit.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\Customparticles.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\dropdown.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\helpers.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\keybinds.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\layout.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\musicplayer.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\notify.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\slider.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\spectatorlist.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\watermark.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\welcomebar.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\framework\widgets\window.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui_freetype.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\valve\schemas\schemas.cpp" />
+    <ClCompile Include="src\entry.cpp" />
+    <ClCompile Include="src\modules\modules.cpp">
+      <IncludeInUnityFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IncludeInUnityFile>
+    </ClCompile>
+    <ClCompile Include="ext\lz4\lz4.c">
+      <IncludeInUnityFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IncludeInUnityFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ext\stackwalker\stackwalker.cpp" />
+    <ClCompile Include="ext\xdraw\xdraw.cpp" />
+    <ClCompile Include="ext\xdraw\xui\xui.cpp" />
+    <ClCompile Include="ext\zydis\zydis.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ext\safetyhook\safetyhook.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\core\interfaces\interfaces.cpp" />
+    <ClCompile Include="src\core\memory\memory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\common.hpp" />
+    <ClInclude Include="src\core\config.hpp" />
+    <ClInclude Include="src\valve\schemas\CEconItemSchema.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\headers\config.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\headers\draw.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\headers\flags.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\headers\fonts.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\headers\functions.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\headers\includes.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\headers\widgets.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\menu_skins.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\settings\colors.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\settings\elements.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\settings\variables.h" />
+    <ClInclude Include="src\core\menu\resources\fonts\inter.hpp" />
+    <ClInclude Include="src\core\menu\resources\fonts\pixel7.hpp" />
+    <ClInclude Include="src\core\menu\resources\particles\custom.hpp" />
+    <ClInclude Include="src\core\menu\resources\particles\effects.hpp" />
+    <ClInclude Include="src\core\menu\resources\particles\weather.hpp" />
+    <ClInclude Include="src\core\security\security.cpp" />
+    <ClInclude Include="src\core\threadpool\threadpool.cpp" />
+    <ClInclude Include="src\core\cs2_internal_dbg.hpp" />
+    <ClInclude Include="src\modules\economy\api_client.h" />
+    <ClInclude Include="src\modules\economy\cloud_config.h" />
+    <ClInclude Include="src\modules\economy\economy.h" />
+    <ClInclude Include="src\modules\legit\movement\airstrafe.h" />
+    <ClInclude Include="src\modules\rage\misc\seed\hitchance.h" />
+    <ClInclude Include="src\modules\rage\misc\seed\nospread_seed.h" />
+    <ClInclude Include="src\modules\rage\misc\seed\seedtrigger.h" />
+    <ClInclude Include="src\modules\rage\misc\seed\seed_wire.h" />
+    <ClInclude Include="src\modules\visuals\misc\enemy_spec.h" />
+    <ClInclude Include="src\modules\visuals\misc\cs2_internal_sb_logo.h" />
+    <ClInclude Include="src\modules\visuals\particles\ground.h" />
+    <ClInclude Include="src\modules\visuals\particles\hitkill.h" />
+    <ClInclude Include="src\modules\visuals\particles\manager.h" />
+    <ClInclude Include="src\modules\visuals\particles\modulation.h" />
+    <ClInclude Include="src\modules\visuals\particles\throwable_trail.h" />
+    <ClInclude Include="src\modules\visuals\particles\vpcf.h" />
+    <ClInclude Include="src\modules\visuals\skinchanger\skin_preview.h" />
+    <ClInclude Include="src\valve\utils\fnv1a.cpp" />
+    <ClInclude Include="src\valve\utils\math.cpp" />
+    <ClInclude Include="src\valve\utils\random.cpp" />
+    <ClInclude Include="src\modules\utils\entities\entities.h" />
+    <ClInclude Include="src\modules\utils\events\events.h" />
+    <ClInclude Include="src\modules\utils\frame_data\frame_data.h" />
+    <ClInclude Include="src\modules\utils\input\input.h" />
+    <ClInclude Include="src\modules\utils\local\local.h" />
+    <ClInclude Include="src\modules\utils\tracing\tracing.h" />
+    <ClInclude Include="src\modules\utils\view\view.h" />
+    <ClInclude Include="src\modules\legit\aimbot\legit_input.h" />
+    <ClInclude Include="src\modules\utils\bones\bones.h" />
+    <ClInclude Include="src\modules\utils\bounds\bounds.h" />
+    <ClInclude Include="src\modules\utils\hitboxes\hitboxes.h" />
+    <ClInclude Include="src\modules\utils\icons\icons.h" />
+    <ClInclude Include="src\modules\visuals\esp\materials\materials.h" />
+    <ClInclude Include="src\modules\rage\misc\auto\autoscope\autoscope.h" />
+    <ClInclude Include="src\modules\rage\misc\auto\autoshoot\autoshoot.h" />
+    <ClInclude Include="src\modules\rage\misc\hitpointscale\hitpointscale.h" />
+    <ClInclude Include="src\modules\rage\misc\mindamage\mindamage.h" />
+    <ClInclude Include="src\modules\rage\misc\nospread\nospread.h" />
+    <ClInclude Include="src\modules\rage\misc\penetration\penetration_crosshair.h" />
+    <ClInclude Include="src\modules\rage\misc\prediction\prediction.h" />
+    <ClInclude Include="src\modules\rage\misc\prediction\systems_prediction.h" />
+    <ClInclude Include="src\modules\rage\silentaim\core.h" />
+    <ClInclude Include="src\modules\visuals\esp\primitive_buffer.hpp" />
+    <ClInclude Include="src\modules\visuals\skinchanger\changer.hpp" />
+    <ClInclude Include="src\modules\visuals\skinchanger\agents.h" />
+    <ClInclude Include="src\modules\visuals\skinchanger\gloves.h" />
+    <ClInclude Include="src\modules\visuals\skinchanger\guns.h" />
+    <ClInclude Include="src\modules\visuals\skinchanger\econ_item_system.h" />
+    <ClInclude Include="src\modules\visuals\skinchanger\knives.h" />
+    <ClInclude Include="src\modules\rage\misc\antiaim\antiaim.h" />
+    <ClInclude Include="src\modules\rage\misc\auto\autostop\autostop.h" />
+    <ClInclude Include="src\modules\rage\misc\backtrack\backtrack.h" />
+    <ClInclude Include="src\modules\rage\misc\extrapolation\extrapolation.h" />
+    <ClInclude Include="src\modules\rage\misc\auto\autopeak\autopeak.h" />
+    <ClInclude Include="src\modules\rage\misc\auto\duckpeek\duckpeek.h" />
+    <ClInclude Include="src\modules\rage\misc\penetration\penetration.h" />
+    <ClInclude Include="src\modules\rage\misc\shared.h" />
+    <ClInclude Include="src\modules\legit\aimbot\legit.h" />
+    <ClInclude Include="src\modules\legit\movement\bunnyhop.h" />
+    <ClInclude Include="src\modules\legit\movement\fastladder.h" />
+    <ClInclude Include="src\modules\legit\movement\slowwalk.h" />
+    <ClInclude Include="src\modules\legit\movement\test_strafer.h" />
+    <ClInclude Include="src\modules\visuals\esp\player\player.chams.h" />
+    <ClInclude Include="src\modules\visuals\esp\player\player.glow.h" />
+    <ClInclude Include="src\modules\visuals\esp\player\player.overlay.h" />
+    <ClInclude Include="src\modules\visuals\esp\item\item.chams.h" />
+    <ClInclude Include="src\modules\visuals\esp\item\item.glow.h" />
+    <ClInclude Include="src\modules\visuals\esp\item\item.overlay.h" />
+    <ClInclude Include="src\modules\visuals\esp\other\other.overlay.h" />
+    <ClInclude Include="src\modules\visuals\esp\projectile\projectile.overlay.h" />
+    <ClInclude Include="src\modules\visuals\esp\projectile\projectile.tracers.h" />
+    <ClInclude Include="src\modules\visuals\misc\camera.h" />
+    <ClInclude Include="src\modules\visuals\misc\dlight.h" />
+    <ClInclude Include="src\modules\visuals\misc\hud.h" />
+    <ClInclude Include="src\modules\visuals\misc\impacts.h" />
+    <ClInclude Include="src\modules\visuals\misc\autobuy.h" />
+    <ClInclude Include="src\modules\visuals\misc\clantag.h" />
+    <ClInclude Include="src\modules\visuals\misc\killfeed.h" />
+    <ClInclude Include="src\modules\visuals\misc\local_alpha.h" />
+    <ClInclude Include="src\modules\visuals\misc\name_changer.h" />
+    <ClInclude Include="src\modules\visuals\misc\onshot.h" />
+    <ClInclude Include="src\modules\visuals\misc\projectile.trajectory.h" />
+    <ClInclude Include="src\modules\visuals\misc\removals.h" />
+    <ClInclude Include="src\modules\visuals\misc\reveal_radar.h" />
+    <ClInclude Include="src\modules\visuals\misc\scoreboard_weapons.h" />
+    <ClInclude Include="src\modules\visuals\misc\viewmodel.h" />
+    <ClInclude Include="src\modules\visuals\modelpreview\modelpreview.h" />
+    <ClInclude Include="src\modules\visuals\modelpreview\vmdls.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\bloom\bloom.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\exposure\exposure.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\fog\fog.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\gamma\gamma.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\lighting\lighting.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\sky\sky.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\smoke\smoke.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\weather\weather.h" />
+    <ClInclude Include="src\modules\rage\combat.hpp" />
+    <ClInclude Include="src\modules\visuals\esp\esp.hpp" />
+    <ClInclude Include="src\core\features.hpp" />
+    <ClInclude Include="src\modules\visuals\misc\misc.hpp" />
+    <ClInclude Include="src\modules\legit\movement\movement.hpp" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\wetness\wetness.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\world.hpp" />
+    <ClInclude Include="src\core\hooks\hook.hpp" />
+    <ClInclude Include="src\core\menu\rendering.hpp" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\data\particles\effects.hpp" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\data\particles\weather.hpp" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\framework\data\particles\custom.hpp" />
+    <ClInclude Include="src\core\settings.hpp" />
+    <ClInclude Include="ext\bc7.hpp" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui_internal.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="src\core\menu\Framework\Framework\Src\thirdparty\imgui\imgui_freetype.h" />
+    <ClInclude Include="ext\imgui\imadd\imgui_addons.h" />
+    <ClInclude Include="ext\inline-syscall\inline_syscall.hpp" />
+    <ClInclude Include="ext\lz4\lz4.h" />
+    <ClInclude Include="ext\nlohmann\json.hpp" />
+    <ClInclude Include="ext\phnt\ntafd.h" />
+    <ClInclude Include="ext\phnt\ntbcd.h" />
+    <ClInclude Include="ext\phnt\ntd3dkmt.h" />
+    <ClInclude Include="ext\phnt\ntdbg.h" />
+    <ClInclude Include="ext\phnt\ntexapi.h" />
+    <ClInclude Include="ext\phnt\ntgdi.h" />
+    <ClInclude Include="ext\phnt\ntimage.h" />
+    <ClInclude Include="ext\phnt\ntintsafe.h" />
+    <ClInclude Include="ext\phnt\ntioapi.h" />
+    <ClInclude Include="ext\phnt\ntkeapi.h" />
+    <ClInclude Include="ext\phnt\ntldr.h" />
+    <ClInclude Include="ext\phnt\ntlpcapi.h" />
+    <ClInclude Include="ext\phnt\ntmisc.h" />
+    <ClInclude Include="ext\phnt\ntmmapi.h" />
+    <ClInclude Include="ext\phnt\ntnls.h" />
+    <ClInclude Include="ext\phnt\ntobapi.h" />
+    <ClInclude Include="ext\phnt\ntpebteb.h" />
+    <ClInclude Include="ext\phnt\ntpfapi.h" />
+    <ClInclude Include="ext\phnt\ntpnpapi.h" />
+    <ClInclude Include="ext\phnt\ntpoapi.h" />
+    <ClInclude Include="ext\phnt\ntpsapi.h" />
+    <ClInclude Include="ext\phnt\ntregapi.h" />
+    <ClInclude Include="ext\phnt\ntrtl.h" />
+    <ClInclude Include="ext\phnt\ntsam.h" />
+    <ClInclude Include="ext\phnt\ntseapi.h" />
+    <ClInclude Include="ext\phnt\ntsmss.h" />
+    <ClInclude Include="ext\phnt\ntstrsafe.h" />
+    <ClInclude Include="ext\phnt\ntsxs.h" />
+    <ClInclude Include="ext\phnt\nttmapi.h" />
+    <ClInclude Include="ext\phnt\nttp.h" />
+    <ClInclude Include="ext\phnt\nttypesafe.h" />
+    <ClInclude Include="ext\phnt\ntuser.h" />
+    <ClInclude Include="ext\phnt\ntwmi.h" />
+    <ClInclude Include="ext\phnt\ntwow64.h" />
+    <ClInclude Include="ext\phnt\ntxcapi.h" />
+    <ClInclude Include="ext\phnt\ntzwapi.h" />
+    <ClInclude Include="ext\phnt\phnt.h" />
+    <ClInclude Include="ext\phnt\phnt_ntdef.h" />
+    <ClInclude Include="ext\phnt\phnt_windows.h" />
+    <ClInclude Include="ext\phnt\smbios.h" />
+    <ClInclude Include="ext\phnt\subprocesstag.h" />
+    <ClInclude Include="ext\phnt\usermgr.h" />
+    <ClInclude Include="ext\phnt\winsta.h" />
+    <ClInclude Include="ext\poly2d.hpp" />
+    <ClInclude Include="ext\stackwalker\stackwalker.hpp" />
+    <ClInclude Include="ext\xdraw\dependencies\fonts.hpp" />
+    <ClInclude Include="ext\xdraw\dependencies\freetype\include.hpp" />
+    <ClInclude Include="ext\xdraw\dependencies\nanosvg\include.hpp" />
+    <ClInclude Include="ext\xdraw\dependencies\nanosvg\x\nanosvg.h" />
+    <ClInclude Include="ext\xdraw\dependencies\nanosvg\x\nanosvgrast.h" />
+    <ClInclude Include="ext\xdraw\dependencies\shaders.hpp" />
+    <ClInclude Include="ext\xdraw\xdraw.hpp" />
+    <ClInclude Include="ext\xdraw\xui\xui.hpp" />
+    <ClInclude Include="ext\xorstr.hpp" />
+    <ClInclude Include="ext\zydis\zydis.h" />
+    <ClInclude Include="ext\safetyhook\safetyhook.hpp" />
+    <ClInclude Include="src\modules\visuals\skinchanger\custom_paint.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\worldblur\worldblur.h" />
+    <ClInclude Include="src\modules\visuals\worldmodulation\world\world.h" />
+    <ClInclude Include="src\valve\classes\cstypes.h" />
+    <ClInclude Include="src\valve\classes\CSchemaSystem.h" />
+    <ClInclude Include="src\valve\classes\schema_types.h" />
+    <ClInclude Include="src\valve\schemas\CBaseEntity.h" />
+    <ClInclude Include="src\valve\schemas\CBasePlayerController.h" />
+    <ClInclude Include="src\valve\schemas\CBasePlayerPawn.h" />
+    <ClInclude Include="src\valve\schemas\CCollisionProperty.h" />
+    <ClInclude Include="src\valve\schemas\CCSGameRules.h" />
+    <ClInclude Include="src\valve\schemas\CEconEntity.h" />
+    <ClInclude Include="src\valve\schemas\CGameSceneNode.h" />
+    <ClInclude Include="src\valve\schemas\CGrenade.h" />
+    <ClInclude Include="src\valve\schemas\CPlantedC4.h" />
+    <ClInclude Include="src\valve\schemas\CWeapon.h" />
+    <ClInclude Include="src\core\memory.hpp" />
+    <ClInclude Include="src\core\patterns.h" />
+    <ClInclude Include="src\valve\classes\proto.h" />
+    <ClInclude Include="src\valve\classes\panorama.h" />
+    <ClInclude Include="src\valve\classes\usercmd.h" />
+    <ClInclude Include="src\valve\classes\trace.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ext\inline-syscall\inline_syscall.inl" />
+    <None Include="src\core\menu\Framework\Framework\Src\framework\gui.context.inl" />
+    <None Include="src\core\menu\Framework\Framework\Src\framework\gui.menu_content.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
