@@ -4,6 +4,7 @@
 #include <nlohmann/json.hpp>
 
 #include <Windows.h>
+#include <wininet.h>
 
 #include <atomic>
 #include <chrono>
