@@ -3,8 +3,10 @@
 #include <stb/stb_image.h>
 #include <nlohmann/json.hpp>
 
+#include <winsock2.h>
 #include <Windows.h>
 #include <wininet.h>
+#pragma comment(lib, "wininet.lib")
 
 #include <atomic>
 #include <chrono>
